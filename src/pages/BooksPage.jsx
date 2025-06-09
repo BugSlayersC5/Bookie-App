@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const books = [
-    { id: 1, title: 'Things Fall Apart', author: 'Chinua Achebe', status: 'Available', },
+    { id: 1, title: 'Things Fall Apart', author: 'Chinua Achebe', status: 'Available', image: 'https://cdn.dribbble.com/userupload/41985817/file/original-cdb492d01db9bade4b588262d7653afc.png?resize=768x576&vertical=center' },
     { id: 2, title: 'Half a Yellow Sun', author: 'Chimamanda Ngozi Adichie', status: 'Borrowed' },
     { id: 3, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', status: 'Available' },
     { id: 4, title: 'Purple Hibiscus', author: 'Chimamanda Ngozi Adichie', status: 'Reserved' },
@@ -70,10 +70,7 @@ export default function BooksPage() {
                         ))}
                     </div>
                 </div>
-
             </div>
-
-
             <Footer />
         </>
     );
