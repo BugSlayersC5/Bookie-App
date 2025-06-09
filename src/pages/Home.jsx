@@ -8,11 +8,38 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <h1 className="text-amber-700"></h1>
+            <h1 className="text-amber-700 mt-10"></h1>
             <section className="bg-[url(./assets/h-img.jpg)] h-[50vh] bg-cover w-[95%] mx-auto relative">
                 <h1 className="font-bold text-3xl text-blue-800 font-serif "></h1>
             </section>
 
+            <section>
+                <div class="flex justify-start mb-6">
+                    <button class="bg-blue-800 text-white py-2 px-6 rounded-md hover:bg-blue-600 focus:outline-none">
+                        Add New Book
+                    </button>
+                </div>
+
+                <div class="flex flex-col space-y-4">
+                    {/* Book 1 */}
+                    <div class="flex justify-between items-center p-4 bg-gray-100 rounded-lg shadow-md">
+                        <div>
+                            <h3 class="text-xl font-semibold">Book Title</h3>
+                            <p class="text-gray-600">Author: Harry Porter</p>
+                        </div>
+                        <div class="flex space-x-4">
+                            {/* Edit Button */}
+                            <button class="bg-blue-800 text-white py-1 px-3 rounded-md hover:bg-yellow-600 focus:outline-none">
+                                Edit
+                            </button>
+                            {/* Delete Button */}
+                            <button class="bg-red-500 text-white py-1 px-3 rounded-md hover:bg-red-600 focus:outline-none">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <div>
                 <h1 className="flex mt-15 font-bold text-3xl text-blue-800 justify-center font-serif ">Welcome To The Library</h1>
@@ -85,24 +112,21 @@ export default function Home() {
 
                         {/* Filter Section (Optional) */}
                         <div class="mt-4 flex space-x-4">
-                            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">By Title</button>
-                            <button class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">By Author</button>
-                            <button class="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600">By Genre</button>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-800">By Title</button>
+                            <button class="bg-blue-800 text-white px-4 py-2 rounded-lg hover:bg-blue-600">By Author</button>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-800">By Genre</button>
                         </div>
                     </div>
 
                     {/* Search Results (Initially Empty) */}
                     <div
-                     id="searchResults" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        id="searchResults" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     </div>
                 </div>
             </section>
 
-
-
-
-            <section className=" flex justify-center w-15% mt-20">
-                <div className="bg-white p-10 gap-2 grid grid-cols-3">
+            <section className=" flex justify-center w-15% mt-2">
+                <div className="bg-white justify-around p-30 gap-6 grid grid-cols-3">
                     <img src={BookImg} alt="Book Image" />
                     <img src={BookImg} alt="Book Image" />
                     <img src={BookImg} alt="Book Image" />
