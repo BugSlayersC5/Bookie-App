@@ -20,17 +20,70 @@ export default function Home() {
             </div>
 
             <section>
+                <div class="p-6 grid-cols-3">
+                    {/* Book Categories with Icons */}
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6">
+                        {/* <!-- Fiction Category --> */}
+                        <div class="flex flex-col items-center bg-gray-200 rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300">
+                            <i class="fas fa-book-open text-4xl text-blue-500 mb-4"></i>
+                            <h3 class="text-lg font-semibold">Fiction</h3>
+                            <p class="text-sm text-gray-600">Explore captivating stories and novels</p>
+                        </div>
+
+                        {/* Non Fiction Category */}
+                        <div class="flex flex-col items-center bg-gray-200 rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300">
+                            <i class="fas fa-book text-4xl text-green-500 mb-4"></i>
+                            <h3 class="text-lg font-semibold">Non-Fiction</h3>
+                            <p class="text-sm text-gray-600">Dive into true stories and factual content</p>
+                        </div>
+
+                        {/* Mystery Category */}
+                        <div class="flex flex-col items-center bg-gray-200 rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300">
+                            <i class="fas fa-search text-4xl text-purple-500 mb-4"></i>
+                            <h3 class="text-lg font-semibold">Mystery</h3>
+                            <p class="text-sm text-gray-600">Uncover thrilling secrets and mysteries</p>
+                        </div>
+
+                        {/*  Science Fiction Category */}
+                        <div class="flex flex-col items-center bg-gray-200 rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300">
+                            <i class="fas fa-rocket text-4xl text-red-500 mb-4"></i>
+                            <h3 class="text-lg font-semibold">Science Fiction</h3>
+                            <p class="text-sm text-gray-600">Explore futuristic worlds and adventures</p>
+                        </div>
+
+                        {/* Kids Category */}
+                        <div class="flex flex-col items-center bg-gray-200 rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300">
+                            <i class="fas fa-child text-4xl text-yellow-500 mb-4"></i>
+                            <h3 class="text-lg font-semibold">Kids</h3>
+                            <p class="text-sm text-gray-600">Books and stories for young readers</p>
+                        </div>
+
+                        {/* Teens Category */}
+                        <div class="flex flex-col items-center bg-gray-200 rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300">
+                            <i class="fas fa-users text-4xl text-pink-500 mb-4"></i>
+                            <h3 class="text-lg font-semibold">Teens</h3>
+                            <p class="text-sm text-gray-600">Books for teens with exciting stories</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+
+            <section>
                 <div class="p-6">
-                    {/* <!-- Search Section --> */}
+                    {/* Search Section */}
                     <div class="flex flex-col items-center mb-8">
-                        {/* <!-- Search Bar --> */}
+                        {/*  Search Bar  */}
                         <div class="relative w-full max-w-md">
                             <input type="text" id="searchInput" class="w-full p-3 pl-10 pr-4 rounded-lg border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Search by title, author, or genre..." />
-                            {/* <!-- Search Icon --> */}
+                            {/* Search Icon  */}
                             <i class="fas fa-search absolute left-3 top-3 text-gray-500"></i>
                         </div>
 
-                        {/* <!-- Filter Section (Optional) --> */}
+                        {/* Filter Section (Optional) */}
                         <div class="mt-4 flex space-x-4">
                             <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">By Title</button>
                             <button class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">By Author</button>
@@ -38,14 +91,13 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* <!-- Search Results (Initially Empty) --> */}
-                    <div id="searchResults" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {/* <!-- This will dynamically show the search results --> */}
+                    {/* Search Results (Initially Empty) */}
+                    <div
+                     id="searchResults" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     </div>
                 </div>
-
-
             </section>
+
 
 
 
