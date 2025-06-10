@@ -9,16 +9,16 @@ export default function Home() {
             <Navbar />
             <h1 className="text-amber-700"></h1>
             <section className="bg-[url(./assets/book.png)] h-[100vh] bg-cover w-[100%] mx-auto relative">
-                <div className="py-30 ml-10">
+                <div className="py-40 ml-25">
                     <h1 className="w-20% h-5"></h1>
                     <p className="text-xs text-white">Hello New Friend</p>
                     <h1 className="font-bold text-6xl  text-white flex font-serif ">GREAT BOOKS, <br />SMART SYSTEM,</h1>
-                    <h1 className="text-yellow-600 font-bold text-6xl flex font-serif ">SEEMLESS ACCESS,</h1>
+                    <h1 className="text-amber-200 font-bold text-6xl flex font-serif ">SEEMLESS ACCESS,</h1>
                     <h4 className="text-white">Lorem ipsum dolor sit amet <br />consectetur adipisicing elit.</h4>
 
                     <div className="flex flex-row gap-4 mt-10">
-                        <button className="text-xs border-radius-none rounded-md bg-yellow-400 p-4 px-10">ADD BOOK</button>
-                        <button className="text-xs border-radius-none rounded-md bg-green-400 p-4 px-10">VIEW BOOKS</button>
+                        <button className="text-xs border-radius-none rounded-md bg-amber-200 p-4 px-10">ADD BOOK</button>
+                        <button className="text-xs border-radius-none rounded-md bg-green-700 p-4 px-10">VIEW BOOKS</button>
                     </div>
                 </div>
 
