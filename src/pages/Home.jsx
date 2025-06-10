@@ -1,49 +1,30 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import BookImg from "../assets/bookimg.jpg";
-import Aimg from "../assets/aimg.jpg";
-import Himg from "../assets/h-img.jpg";
+// import BookImg from "../assets/bookimg.jpg";
+import Book from "../assets/book.png";
 
 export default function Home() {
     return (
         <>
             <Navbar />
             <h1 className="text-amber-700 mt-10"></h1>
-            <section className="bg-[url(./assets/h-img.jpg)] h-[50vh] bg-cover w-[95%] mx-auto relative">
-                <h1 className="font-bold text-3xl text-blue-800 font-serif "></h1>
-            </section>
-
-            <section>
-                <div class="flex justify-start mb-6">
-                    <button class="bg-blue-800 text-white py-2 px-6 rounded-md hover:bg-blue-600 focus:outline-none">
-                        Add New Book
-                    </button>
+            <section className="bg-[url(./assets/book.png)] h-[100vh] bg-cover w-[95%] mx-auto relative">
+                <div>
+                    <h1 className="font-bold text-6xl  text-white flex font-serif ">GREAT BOOKS, <br />SMART SYSTEM,</h1>
+                    <h1 className="text-yellow-600 font-bold text-6xl flex font-serif ">SEEMLESS ACCESS,</h1>
+                    <h4 className="text-white">Lorem ipsum dolor sit amet <br />consectetur adipisicing elit.</h4>
                 </div>
 
-                <div class="flex flex-col space-y-4">
-                    {/* Book 1 */}
-                    <div class="flex justify-between items-center p-4 bg-gray-100 rounded-lg shadow-md">
-                        <div>
-                            <h3 class="text-xl font-semibold">Book Title</h3>
-                            <p class="text-gray-600">Author: Harry Porter</p>
-                        </div>
-                        <div class="flex space-x-4">
-                            {/* Edit Button */}
-                            <button class="bg-blue-800 text-white py-1 px-3 rounded-md hover:bg-yellow-600 focus:outline-none">
-                                Edit
-                            </button>
-                            {/* Delete Button */}
-                            <button class="bg-red-500 text-white py-1 px-3 rounded-md hover:bg-red-600 focus:outline-none">
-                                Delete
-                            </button>
-                        </div>
-                    </div>
+                <div className="flex ">
+                    <button className="text-30 border bg-yellow-400 p-4">ADD BOOK</button>
+                    <button className="text-30 border bg-green-400 p-4">VIEW BOOKS</button>
                 </div>
+
             </section>
 
             <div>
                 <h1 className="flex mt-15 font-bold text-3xl text-blue-800 justify-center font-serif ">Welcome To The Library</h1>
-                <h2 className="text-2xl flex display-flex mt-5 justify-center font-serif">All E-books</h2>
+                <h2 className="text-2xl flex display-flex mt-5 justify-center font-serif">Explore Our Books</h2>
             </div>
 
             <section>
@@ -96,9 +77,6 @@ export default function Home() {
 
             </section>
 
-
-
-
             <section>
                 <div class="p-6">
                     {/* Search Section */}
@@ -125,17 +103,51 @@ export default function Home() {
                 </div>
             </section>
 
+            <section class="w-full px-6 py-12 bg-gray-50">
+                <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 items-start">
+
+                    {/* Left: List of Popular Books */}
+                    <div class="w-full md:w-1/2 space-y-4">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Popular Books</h2>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+                                <img src={Book} alt="Book 1" class="w-full h-32 object-cover rounded" />
+                                <p class="mt-2 text-sm text-gray-700 font-medium">Book Title 1</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+                                <img src={Book} alt="Book 2" class="w-full h-32 object-cover rounded" />
+                                <p class="mt-2 text-sm text-gray-700 font-medium">Book Title 2</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+                                <img src={Book} alt="Book 2" class="w-full h-32 object-cover rounded" />
+                                <p class="mt-2 text-sm text-gray-700 font-medium">Book Title 3</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {/* Right: Animated Book Preview Placeholder */}
+                    <div class="w-full md:w-1/2 bg-white rounded-xl shadow-lg p-6 h-[300px] flex items-center justify-center">
+                        <div class="text-center space-y-3">
+                            <div class="w-40 h-56 bg-gray-200 rounded-lg animate-pulse"></div>
+                            <p class="text-lg font-semibold text-gray-600">Book Preview</p>
+                            <p class="text-sm text-gray-400">Animated transition will appear here</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section className=" flex justify-center w-15% mt-2">
                 <div className="bg-white justify-around p-30 gap-6 grid grid-cols-3">
-                    <img src={BookImg} alt="Book Image" />
-                    <img src={BookImg} alt="Book Image" />
-                    <img src={BookImg} alt="Book Image" />
-                    <img src={BookImg} alt="Book Image" />
-                    <img src={BookImg} alt="Book Image" />
-                    <img src={BookImg} alt="Book Image" />
-                    <img src={BookImg} alt="Book Image" />
-                    <img src={BookImg} alt="Book Image" />
-                    <img src={BookImg} alt="Book Image" />
+                    <img src={Book} alt="book.png" />
+                    <img src={Book} alt="book.png" />
+                    <img src={Book} alt="book.png" />
+                    <img src={Book} alt="book.png" />
+                    <img src={Book} alt="book.png" />
+                    <img src={Book} alt="book.png" />
+                    <img src={Book} alt="book.png" />
+                    <img src={Book} alt="book.png" />
+                    <img src={Book} alt="book.png" />
                 </div>
             </section>
             <Footer />
