@@ -21,7 +21,7 @@ export function BookCard({ book }) { // Using named export here
     };
 
     return (
-        <div className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 p-4 border border-green-100 flex flex-col rounded-xl">
+        <div className="bg-light-green shadow-lg hover:shadow-xl transition-all duration-300 p-4 border border-transparent flex flex-col rounded-xl">
             <img
                 src={book.image}
                 className="w-full h-36 object-cover rounded-md mb-2" // Reduced image height to h-36 (from h-40), mb-3 to mb-2
@@ -30,61 +30,49 @@ export function BookCard({ book }) { // Using named export here
 
             <div className="flex-grow flex flex-col justify-between">
                 <div>
-                    <h2 className="text-lg font-bold text-green-900 mb-0.5 leading-tight">{book.title}</h2> {/* Reduced font size to text-lg (from text-xl), mb-1 to mb-0.5, added leading-tight */}
-                    <p className="text-sm text-gray-700 mb-1 flex items-center"> {/* Reduced font size to text-sm, mb-1.5 to mb-1 */}
-                        <BookOpen size={14} className="mr-1.5 text-green-600" /> {/* Reduced icon size, margin */}
+                    <h2 className="text-lg font-bold text-curry mb-0.5 leading-tight">{book.title}</h2> 
+                    <p className="text-sm  text-off-white mb-1 flex items-center"> 
+                        <BookOpen size={14} className="mr-1.5  text-off-white" /> 
                         by {book.author}
                     </p>
                     {book.genre && (
-                        <p className="text-sm text-gray-600 mb-1 flex items-center"> {/* Reduced font size, mb-1.5 to mb-1 */}
-                            <Tag size={14} className="mr-1.5 text-green-600" /> {/* Reduced icon size, margin */}
+                        <p className="text-sm text-off-white mb-1 flex items-center">
+                            <Tag size={14} className="mr-1.5  text-off-white" /> 
                             Genre: {book.genre}
                         </p>
                     )}
                     {book.yearPublished && (
-                        <p className="text-sm text-gray-600 mb-2 flex items-center"> {/* Reduced font size, mb-2 remains */}
-                            <Calendar size={14} className="mr-1.5 text-green-600" /> {/* Reduced icon size, margin */}
+                        <p className="text-sm text-off-white mb-2 flex items-center"> 
+                            <Calendar size={14} className="mr-1.5  text-off-white" /> 
                             Published: {book.yearPublished}
                         </p>
                     )}
                 </div>
-
-                <span
-                    className={`inline-block mt-2 px-2.5 py-0.5 rounded-full text-xs font-medium ${ // Reduced mt-3 to mt-2, px/py, text-sm to text-xs
-                        book.status === 'Available'
-                            ? 'bg-green-200 text-green-800'
-                            : book.status === 'Borrowed'
-                                ? 'bg-red-200 text-red-800'
-                                : 'bg-yellow-200 text-yellow-800'
-                    }`}
-                >
-                    {book.status}
-                </span>
             </div>
 
             {/* Action Row */}
-            <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"> {/* Reduced mt-4 to mt-3, pt-4 to pt-3 */}
-                <div className="flex space-x-2"> {/* Reduced space-x-3 to space-x-2 */}
+            <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between"> 
+                <div className="flex space-x-2"> 
                     <button
                         onClick={handleEdit}
-                        className="p-1.5 rounded-full hover:bg-blue-100 text-blue-600 transition-colors duration-200" // Reduced p-2 to p-1.5
+                        className="p-1.5 rounded-full hover:bg-blue-100 text-curry transition-colors duration-200" 
                         title="Edit Book"
                     >
-                        <Edit size={18} /> {/* Reduced icon size */}
+                        <Edit size={18} /> 
                     </button>
                     <button
                         onClick={handleDelete}
-                        className="p-1.5 rounded-full hover:bg-red-100 text-red-600 transition-colors duration-200" // Reduced p-2 to p-1.5
+                        className="p-1.5 rounded-full hover:bg-red-100 text-red-500 transition-colors duration-200" 
                         title="Delete Book"
                     >
-                        <Trash2 size={18} /> {/* Reduced icon size */}
+                        <Trash2 size={18} /> 
                     </button>
                 </div>
                 <button
                     onClick={handleViewBook}
-                    className="px-3 py-1.5 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors duration-200 text-sm font-semibold flex items-center" // Adjusted px/py
+                    className="px-3 py-1.5 bg-curry text-white rounded-md hover:bg-off-white transition-colors duration-200 text-sm font-semibold flex items-center" 
                 >
-                    <BookOpen size={14} className="mr-1.5" /> View Book {/* Reduced icon size, margin */}
+                    <BookOpen size={14} className="mr-1.5" /> View Book
                 </button>
             </div>
         </div>
