@@ -7,7 +7,7 @@ export default function CreateBook() {
         <>
             <Navbar />
 
-     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-8">
       <div className="w-full max-w-lg bg-white p-6 rounded-xl shadow-md">
  <h2 className="text-2xl font-semibold mb-4 text-gray-800">Add New Book</h2>
       <form className="space-y-4">
