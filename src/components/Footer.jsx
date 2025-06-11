@@ -71,7 +71,7 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div className=" not-italic space-x-2">
-                        <h3 className="text-3xl font-medium mb-4 ">Stay Turned With Us</h3>
+                        <h3 className="text-lg font-medium mb-4 ">Stay Turned With Us</h3>
                         <div className="flex items-center space-x-2 text-sm text-white hover:text-[#FDD36B]">
                             <MapPin className="w-6 h-6 " />
                             <p>Greater Accra <br /> Afriyie Street </p>
