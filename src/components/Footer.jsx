@@ -1,6 +1,8 @@
 import Logo from "../assets/bookielogo.png";
 import { Linkedin, Instagram, Facebook, Twitter, ChevronLeft } from "lucide-react";
 import { ChevronRight } from 'lucide-react';
+import { MapPin , Mail, Phone } from 'lucide-react';
+
 
 
 <ChevronRight />
@@ -70,8 +72,19 @@ export default function Footer() {
                     </div>
                     <div className=" not-italic space-x-2">
                         <h3 className="text-3xl font-medium mb-4 ">Stay Turned With Us</h3>
-                        <p>Greater Accra <br /> Afriyie Street </p>
-                        <p>Bookieguys@gmail.com<br /> +2332446699008</p>
+                        <div className="flex items-center space-x-2 text-sm text-white hover:text-[#FDD36B]">
+                            <MapPin className="w-6 h-6 " />
+                            <p>Greater Accra <br /> Afriyie Street </p>
+                        </div>
+                        <div className="flex items-center space-x-2 text-sm text-white hover:text-[#FDD36B]">
+                            <Mail className="w-5 h-5 " />
+                        <p>Bookieguys@gmail.com </p>
+                        </div>
+                            <div className="flex items-center space-x-2 text-sm text-white hover:text-[#FDD36B] ">
+                            <Phone className="w-5 h-5" />
+                            <p> +2332446699008</p>
+                            </div>
+                            
                     </div>
 
 
