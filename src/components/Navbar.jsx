@@ -10,7 +10,7 @@ export default function Navbar(){
             <div className="flex space-x-8 items-center ">
                 <Link to="/" className=" hover:text-[#FDD36B] font-medium text-white"> Home</Link>
                 <Link to="/books-page" className=" hover:text-[#FDD36B] font-medium text-white">Books </Link>
-                <Link to="/create-book" className=" hover:text-[#FDD36B] font-medium text-white">Add Book</Link>
+                <Link to="/create-book" className=" hover:text-[#FDD36B] font-medium text-white">Add Book</Link>    
 
             </div>  
             
