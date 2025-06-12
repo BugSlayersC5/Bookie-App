@@ -1,9 +1,30 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Book from "../assets/book.png";
+import { BookCard } from "../components/BookCard";
+import { apiClient } from "../api/client";
+import { useState, useEffect } from "react";
 
 
 export default function Home() {
+
+    const [books, setBooks] = useState([]);
+
+    const getBooks = () => {
+        apiClient.get('/books')
+            .then((response) => {
+                console.log(response.data);
+                setBooks(response.data.data);
+
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+
+    }
+
+    useEffect(getBooks, []);
+
 
     return (
         <>
@@ -44,18 +65,19 @@ export default function Home() {
                         <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quo dignissimos expedita quae incidunt. Maxime, sed.</p>
                     </div>
 
-                    <div className="flex flex-row w-60 h-40 gap-4 mt-10 justify-items-center space-x-8">
-                        <img src={Book} alt="book.png" />
-                        <img src={Book} alt="book.png" />
-                        <img src={Book} alt="book.png" />
-                        <img src={Book} alt="book.png" />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        {books.map(book => {
+                            console.log(book)
+                            return (
+                                <BookCard key={book.id} book={book} />
+                            );
+                        })}
                     </div>
 
-                   
                 </div>
             </section>
 
-            
+
 
             <section className="bg-dark-green font-sans py-12 px-4 sm:px-6 lg:px-8">
                 <div className="container mx-auto max-w-4xl">
@@ -158,7 +180,7 @@ export default function Home() {
                 </div>
             </section>
 
-           
+
 
             <section className="px-4 py-12 bg-cyan-200 grid grid-cols-1 md:grid-cols-3 gap-6 sm:px-6 lg:px-8">
                 <div className="bg-gray-50 rounded-2xl p-6 text-black">
