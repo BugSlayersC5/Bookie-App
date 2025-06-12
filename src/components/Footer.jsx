@@ -27,7 +27,7 @@ export default function Footer() {
 
                 <div className=" grid grid-cols-1 md:grid-cols-3 gap-7 mb-7" >
                     <div className="text-center md:text-left">
-                        <h3 className="text-3xl font-medium mb-4 ">Quick Links</h3>
+                        <h3 className="text-2xl font-medium mb-4 text-gray-400">Quick Links</h3>
                         <ul className="space-y-3">
                             <div className="flex items-center space-x-1 text-sm text-white hover:text-[#FDD36B]">
                                 <ChevronRight className="w-4 h-4" />
@@ -49,7 +49,7 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="text-3xl font-medium mb-4">Site Link</h3>
+                        <h3 className="text-2xl font-medium mb-4 text-gray-400">Site Links</h3>
                         <ul className="space-y-3">
                             <div className="flex items-center space-x-1 text-sm text-white hover:text-[#FDD36B]">
                                 <ChevronRight className="w-4 h-4" />
@@ -71,14 +71,14 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div className=" not-italic space-x-2">
-                        <h3 className="text-lg font-medium mb-4 ">Stay Turned With Us</h3>
+                        <h3 className="text-2xl font-medium mb-4 text-gray-400">Stay Tuned With Us</h3>
                         <div className="flex items-center space-x-2 text-sm text-white hover:text-[#FDD36B]">
-                            <MapPin className="w-6 h-6 " />
-                            <p>Greater Accra <br /> Afriyie Street </p>
+                            <MapPin className="w-6 h-6  " />
+                            <p className="mb-3">Greater Accra <br /> Afriyie Street </p>
                         </div>
                         <div className="flex items-center space-x-2 text-sm text-white hover:text-[#FDD36B]">
                             <Mail className="w-5 h-5 " />
-                        <p>Bookieguys@gmail.com </p>
+                        <p className="mb-3">Bookieguys@gmail.com </p>
                         </div>
                             <div className="flex items-center space-x-2 text-sm text-white hover:text-[#FDD36B] ">
                             <Phone className="w-5 h-5" />
@@ -92,8 +92,8 @@ export default function Footer() {
                 </div>
             </div>
             <div className="text-center text-sm " >
-                <hr className="w-[100%]" />
-                <h1 className="mt-3 uppercase">All right reserved <span className="text-[#FDD36B]">Bookie</span>. </h1>
+                <hr className="w-[100%] mt-7" />
+                <h1 className="mt-15 uppercase text-gray-400">All right reserved <span className="text-[#FDD36B]">Bookie</span>. </h1>
             </div>
         </footer>
 
