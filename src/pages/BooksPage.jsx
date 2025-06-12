@@ -52,7 +52,7 @@ export default function BooksPage() {
                             <input
                                 type="text"
                                 placeholder="Search by title or author"
-                                className="w-full pl-10 px-4 py-2 border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-off-white bg-light-green"
+                                className="w-full pl-10 px-4 py-2 border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-off-white bg-light-green text-white"
                             />
                         </div>
                     </div>
