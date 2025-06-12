@@ -34,11 +34,11 @@ export default function BooksPage() {
                 <div className="min-h-screen ">
                     <div className="flex flex-row justify-center text-4xl font-bold text-off-white text-center">
                             < LibraryBig size={48} color="#FDD36B" />
-                        <h1 className="text-4xl font-bold mb-8 text-off-white text-center">
+                        <h1 className="text-4xl font-bold mb-8 text-black text-center">
                             Library Collection
                         </h1>
                     </div>
-                    <p className='text-sm font-bold mb-8 text-off-white text-center'>
+                    <p className='text-sm font-bold mb-8 text-black text-center'>
                         Manage your library collection with ease. Search, add, edit, and organize <br />
                         your books.
                     </p>
