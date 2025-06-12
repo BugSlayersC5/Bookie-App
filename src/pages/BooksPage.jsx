@@ -32,10 +32,8 @@ export default function BooksPage() {
 
             <div className="p-8 bg-dark-green min-h-screen">
                 <div className="min-h-screen ">
-                    <div className="text-4xl font-bold mb-8 text-off-white text-center">
-                        <span>
-                            < LibraryBig className=" text-4xl font-bold mb-8 text-off-white text-center" />
-                        </span>
+                    <div className="flex flex-row justify-center text-4xl font-bold text-off-white text-center">
+                            < LibraryBig size={48} color="#FDD36B" />
                         <h1 className="text-4xl font-bold mb-8 text-off-white text-center">
                             Library Collection
                         </h1>
