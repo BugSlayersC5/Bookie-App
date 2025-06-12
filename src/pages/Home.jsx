@@ -9,27 +9,27 @@ import { useState, useEffect } from "react";
 export default function Home() {
 
     const [books, setBooks] = useState([]);
-
-    const getBooks = () => {
-        apiClient.get('/books')
-            .then((response) => {
-                console.log(response.data);
-                setBooks(response.data.data);
-
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-
-    }
-
-    useEffect(getBooks, []);
-
+    
+        const getBooks = () => {
+            apiClient.get('/books')
+                .then((response) => {
+                    console.log(response.data);
+                    setBooks(response.data.data);
+    
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+    
+        }
+    
+        useEffect(getBooks, []);
+    
 
     return (
         <>
             <Navbar />
-            <section className="bg-[url('./assets/book.png')] bg-cover  w-full min-h-screen flex items-start justify-st text-center sm:text-left p-4 sm:p-6">
+            <section className="bg-[url('./assets/book.png')] bg-cover sm: w-full h-[70vh] md:h-[100vh] flex items-start justify-st text-center sm:text-left p-4 sm:p-6">
                 <div className="py-16 sm:py-20 px- 2sm:px-6 max-w-4xl w-full md:ml-25 lg:mx-auto">
                     <p className="text-sm text-curry mb-2"> ---- Hello New Friend</p>
                     <h1 className="font-bold text-4xl leading-tight md:text-7xl text-white font-serif mb-2">
@@ -67,13 +67,18 @@ export default function Home() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {books.map(book => {
-                            console.log(book)
                             return (
                                 <BookCard key={book.id} book={book} />
                             );
                         })}
                     </div>
 
+                    {/* <div className="flex flex-row w-60 h-40 gap-4 mt-10 justify-items-center space-x-8">
+                        <img src={Book} alt="book.png" />
+                        <img src={Book} alt="book.png" />
+                        <img src={Book} alt="book.png" />
+                        <img src={Book} alt="book.png" />
+                    </div>  */}
                 </div>
             </section>
 
