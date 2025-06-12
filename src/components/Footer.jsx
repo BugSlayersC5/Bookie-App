@@ -15,8 +15,8 @@ export default function Footer() {
         <footer className="bg-[#234046] py-8 px-12 text-white md:px-30">
             <div className=" md:flex justify-between">
                 <div className="">
-                    <Link to="/">
-                    < img src={Logo} alt=""  /></Link>
+            
+                    < img src={Logo} alt=""  />
                     <p className="not-italic mt-3">Library collection with ease. <br /> Search,add,edit <br />and organize your books. <br />Great Books,Smart System </p>
                     <div className="flex flex-row space-x-2 mt-5">
                         <Linkedin className="hover:text-" />

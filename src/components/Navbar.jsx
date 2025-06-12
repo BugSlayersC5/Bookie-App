@@ -30,7 +30,8 @@ export default function Navbar(){
     <nav className="bg-[#234046] px-6 py-4 shadow-sm">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         <div className="flex-shrink-0">
-          <img src={Logo} alt="Logo" className="h-8" />
+            <Link to="/">
+          <img src={Logo} alt="Logo" className="h-8" /></Link>
         </div>
         <div className="sm:hidden">
           <button
