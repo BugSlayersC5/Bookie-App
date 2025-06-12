@@ -2,6 +2,7 @@ import Logo from "../assets/bookielogo.png";
 import { Linkedin, Instagram, Facebook, Twitter, ChevronLeft } from "lucide-react";
 import { ChevronRight } from 'lucide-react';
 import { MapPin , Mail, Phone } from 'lucide-react';
+import { Link } from "react-router";
 
 
 
@@ -16,7 +17,7 @@ export default function Footer() {
             <div className="flex justify-between">
                 <div className="">
                     <img src={Logo} alt="" />
-                    <p className="not-italic mt-3">Library collection with ease. <br /> Search,add,edit and organize your books. <br />Great Book,Smart System </p>
+                    <p className="not-italic mt-3">Library collection with ease. <br /> Search,add,edit and organize your books. <br />Great Books,Smart System </p>
                     <div className="flex flex-row space-x-2 mt-5">
                         <Linkedin className="hover:text-[#FDD36B]" />
                         <Instagram className="hover:text-[#FDD36B]" />
@@ -31,19 +32,19 @@ export default function Footer() {
                         <ul className="space-y-3">
                             <div className="flex items-center space-x-1 text-sm text-white hover:text-[#FDD36B]">
                                 <ChevronRight className="w-4 h-4" />
-                                <span>Home</span>
+                                 <span><Link to="/">Home</Link></span>
                             </div>
                             <div className="flex items-center space-x-1 text-sm text-white hover:text-[#FDD36B]">
                                 <ChevronRight className="w-4 h-4" />
-                                <span>Add Book</span>
+                                <span><Link to="/create-book">Add Book</Link></span>
                             </div>
                             <div className="flex items-center space-x-1 text-sm text-white hover:text-[#FDD36B]">
                                 <ChevronRight className="w-4 h-4" />
-                                <span>Our Team</span>
+                                <span><Link href="">Our Team</Link></span>
                             </div>
                             <div className="flex items-center space-x-1 text-sm text-white hover:text-[#FDD36B]">
                                 <ChevronRight className="w-4 h-4" />
-                                <span>Book</span>
+                                <span><Link to="/books-page">Books</Link></span>
                             </div>
 
                         </ul>
