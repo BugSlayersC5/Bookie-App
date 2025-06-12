@@ -1,16 +1,27 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
+import { useSearchParams } from "react-router";
+import { useEffect, useState } from "react";
+import { apiClient } from "../api/client";
 
 export default function ViewBook() {
-    const book = {
-        title: 'Things Fall Apart',
-        author: 'Chinua Achebe',
-        status: 'Available',
-        image: 'https://cdn.dribbble.com/userupload/41985817/file/original-cdb492d01db9bade4b588262d7653afc.png?resize=768x576&vertical=center',
-        description:
-            'A classic novel that explores pre-colonial life in Nigeria and the impact of European colonization on African culture.',
-    };
+    const [searchParams] = useSearchParams();
+    const id = searchParams.get('id');
+
+    const [book, setBook] = useState({});
+
+    const getBook = () => {
+        apiClient.get(`/books/${id}`)
+            .then((response) => {
+                console.log(response.data);
+                setBook(response.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
+
+    useEffect(getBook, []);
 
     return (
         <>
@@ -26,18 +37,13 @@ export default function ViewBook() {
                         <div>
                             <h1 className="text-4xl font-extrabold text-green-900 mb-2">{book.title}</h1>
                             <p className="text-lg text-gray-700 italic mb-3">by {book.author}</p>
-                            <span
-                                className={`inline-block px-4 py-1 rounded-full text-sm font-semibold border-2 ${book.status === 'Available'
-                                    ? 'bg-green-100 border-green-400 text-green-800'
-                                    : book.status === 'Borrowed'
-                                        ? 'bg-red-100 border-red-400 text-red-800'
-                                        : 'bg-yellow-100 border-yellow-400 text-yellow-800'
-                                    }`}
-                            >
-                                {book.status}
-                            </span>
+                            <div>
+                                <p className="text-gray-600 leading-relaxed">{book.bookCategory}</p>
+                        <p className="text-gray-600 leading-relaxed">{book.publicationYear}</p>
+                        <p className="text-gray-600 leading-relaxed">{book.publicationCompany}</p>
+                            </div>
                         </div>
-                        <p className="text-gray-600 leading-relaxed">{book.description}</p>
+                         
                         <button
                             onClick={() => window.history.back()}
                             className="self-start mt-4 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition"
