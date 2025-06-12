@@ -1,70 +1,130 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useSearchParams } from "react-router";
+import { useEffect, useState } from "react";
+import { apiClient } from "../api/client";
+import SubmitButton from "../components/SubmitButton";
 
 export default function EditBook() {
-    return (
-        <>
+  const [searchParams] = useSearchParams();
+  const id = searchParams.get('id');
 
-            <Navbar />
+  const [book, setBook] = useState({});
 
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <div className="w-full max-w-lg bg-white p-6 rounded-xl shadow-md">
-        <h2 className="text-2xl font-bold mb-6 text-center text-gray-700">Edit Book</h2>
-        
-        <form  className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-600">Title</label>
-            <input
-              type="text"
-              name="title"
-              className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#234046]"
-              placeholder="Book Title"
-              required
-            />
-          </div>
+  const getBook = () => {
+    apiClient.get(`/books/${id}`)
+      .then((response) => {
+        console.log(response.data);
+        setBook(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }
 
-          <div>
-            <label className="block text-sm font-medium text-gray-600">Author</label>
-            <input
-              type="text"
-              name="author"
-              className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#234046]"
-              placeholder="Author Name"
-              required
-            />
-          </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-600">Genre</label>
-            <input
-              type="text"
-              name="genre"
-              className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#234046]"
-              placeholder="Genre"
-            />
-          </div>
+  useEffect(getBook, []);
 
-          <div>
-            <label className="block text-sm font-medium text-gray-600">Description</label>
-            <textarea
-              name="description"
-              className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#234046]"
-              placeholder="Write a short description..."
-              rows="3"
-            ></textarea>
-          </div>
+  const patchBook = (event) => {
+    event.preventDefault();
 
-          <button
-            type="submit"
-            className="w-full bg-[#192D30] text-white py-2 px-4 rounded-md hover:bg-[#234046] transition"
-          >
-            Save Changes
-          </button>
-        </form>
+    // Collect form input
+    const data = new FormData(event.target);
+
+    // Post data to api
+    apiClient.patch(`/books/${id}`, data, {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
+  return (
+    <>
+      <Navbar />
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+        <div className="w-full max-w-lg bg-white p-6 rounded-xl shadow-md">
+          <h2 className="text-2xl font-bold mb-6 text-center text-gray-700">Edit Book</h2>
+
+          <form onSubmit={patchBook} className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Title</label>
+              <input
+                type="text"
+                name="title"
+                className="mt-1 w-full px-4 py-2 shadow-sm border-gray-300 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#234046]"
+                defaultValue={book.title}
+
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Author</label>
+              <input
+                type="text"
+                name="author"
+                className="mt-1 w-full px-4 py-2 shadow-sm border-gray-300 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#234046]"
+                required
+                defaultValue={book.author}
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Book Category</label>
+              <input
+                type="text"
+                name="bookCategory"
+                className="mt-1 w-full px-4 py-2 shadow-sm border-gray-300 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#234046]"
+                defaultValue={book.bookCategory}
+
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Publication Company</label>
+              <input
+                type="text"
+                name="publicationCompany"
+                className="mt-1 w-full px-4 py-2 shadow-sm border-gray-300 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#234046]"
+                defaultValue={book.publicationCompany}
+
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700"> Publication Year</label>
+              <input
+                type="number"
+                name="publicationYear"
+                className="mt-1 w-full px-4 py-2 shadow-sm border-gray-300 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#234046]"
+                defaultValue={book.publicationYear}
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Cover Image URL</label>
+              <input
+                type="url"
+                name="image"
+                className="mt-1 w-full px-4 py-2 shadow-sm border-gray-300 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#234046]"
+                defaultValue={book.image}
+              />
+            </div>
+
+            <SubmitButton title={"Update Book"} />
+
+          
+          </form>
+        </div>
       </div>
-    </div>
-            <Footer />
+      <Footer />
 
-        </>
-    );
+    </>
+  );
 }

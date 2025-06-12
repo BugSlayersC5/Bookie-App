@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { apiClient } from "../api/client";
+import SubmitButton from "../components/SubmitButton";
 
 
 export default function CreateBook() {
@@ -89,12 +90,7 @@ export default function CreateBook() {
             </div>
 
             <div>
-              <button
-                type="submit"
-                className="w-full py-2 px-4 bg-[#192D30] text-white font-semibold rounded-lg shadow-md hover:bg-[#234046] transition"
-              >
-                Add Book
-              </button>
+              <SubmitButton title={"Add Book"} />
             </div>
           </form>
         </div>
