@@ -8,18 +8,17 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <section className="bg-[url('./assets/book.png')] bg-cover w-full min-h-screen flex items-center p-4 sm:p-6 justify-center text-center sm:justify-start sm:text-left lg:justify-start lg:text-left">
-
+            <section className="bg-[url('./assets/book.png')] bg-cover  w-full min-h-screen flex items-start justify-st text-center sm:text-left p-4 sm:p-6">
                 <div className="py-16 sm:py-20 px- 2sm:px-6 max-w-4xl w-full md:ml-25 lg:mx-auto">
                     <p className="text-sm text-curry mb-2"> ---- Hello New Friend</p>
-                    <h1 className="font-bold text-4xl leading-tight md:text-8xl text-white font-serif mb-2">
+                    <h1 className="font-bold text-4xl leading-tight md:text-7xl text-white font-serif mb-2">
                         GREAT BOOKS, <br className="md:hidden" />SMART SYSTEM,
                     </h1>
-                    <h1 className="text-curry font-bold text-8xl md:text-7xl font-serif mt-2">
+                    <h1 className="text-curry font-bold text-4xl md:text-7xl font-serif mt-2">
                         SEAMLESS ACCESS,
                     </h1>
                     <h4 className="text-white mt-4 max-w-md mx-auto sm:mx-0 text-base sm:text-lg">
-                        Library collection with ease. <br className="sm:hidden" />Great Book,Smart System
+                        Library collection with ease. <br className="sm:hidden" />Great Books,Smart System.
                     </h4>
 
                     <div className="flex flex-col sm:flex-row gap-4 mt-10 justify-center sm:justify-start">
@@ -45,16 +44,18 @@ export default function Home() {
                         <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quo dignissimos expedita quae incidunt. Maxime, sed.</p>
                     </div>
 
-                    <div className="flex flex-row w-60 h-40 gap-4  mt-20 space-x-12">
+                    <div className="flex flex-row w-60 h-40 gap-4 mt-10 justify-items-center space-x-8">
                         <img src={Book} alt="book.png" />
                         <img src={Book} alt="book.png" />
                         <img src={Book} alt="book.png" />
                         <img src={Book} alt="book.png" />
                     </div>
+
+                   
                 </div>
             </section>
 
-
+            
 
             <section className="bg-dark-green font-sans py-12 px-4 sm:px-6 lg:px-8">
                 <div className="container mx-auto max-w-4xl">
@@ -112,8 +113,26 @@ export default function Home() {
                             </div>
                         </div>
 
-
                         {/* FAQ ITEM 4 */}
+                        <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                            <button className="faq-toggle w-full flex justify-between items-center p-4 sm:p-6 text-left">
+                                <h3 className="text-base sm:text-lg font-semibold text-gray-800">How do I edit a book?</h3>
+                                <i className="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                            </button>
+                            <div className="faq-content px-4 sm:px-6 pb-4 sm:pb-6 hidden">
+                                <p className="text-sm sm:text-base text-gray-600 mb-3">
+                                    To reset your password:
+                                </p>
+                                <ol className="list-decimal pl-5 text-gray-600 space-y-2 text-sm sm:text-base">
+                                    <li>Go to the login page and click "Forgot password"</li>
+                                    <li>Enter the email address associated with your account</li>
+                                    <li>Check your email for a password reset link</li>
+                                    <li>Click the link and follow the instructions to create a new password</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        {/* FAQ ITEM 5 */}
                         <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
                             <button className="faq-toggle w-full flex justify-between items-center p-4 sm:p-6 text-left">
                                 <h3 className="text-base sm:text-lg font-semibold text-gray-800">Is there a mobile app available?</h3>
@@ -139,7 +158,7 @@ export default function Home() {
                 </div>
             </section>
 
-
+           
 
             <section className="px-4 py-12 bg-cyan-200 grid grid-cols-1 md:grid-cols-3 gap-6 sm:px-6 lg:px-8">
                 <div className="bg-gray-50 rounded-2xl p-6 text-black">
