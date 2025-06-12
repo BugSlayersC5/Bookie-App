@@ -43,8 +43,8 @@ export default function Home() {
                     </h4>
 
                     <div className="flex flex-col sm:flex-row gap-4 mt-10 justify-center sm:justify-start">
-                        <button className="text-xs sm:text-sm rounded-md bg-curry py-3 px-6 text-white hover:opacity-90 transition-opacity">ADD BOOK</button>
-                        <button className="text-xs sm:text-sm rounded-md bg-dark-green py-3 px-6 text-white hover:opacity-90 transition-opacity">VIEW BOOKS</button>
+                        <button className="text-xs sm:text-sm rounded-md bg-curry py-3 px-6 text-black hover:opacity-90 transition-opacity">ADD BOOK</button>
+                        <button className="text-xs sm:text-sm rounded-md bg-[#029967] py-3 px-6 text-white hover:opacity-90 transition-opacity">VIEW BOOKS</button>
                     </div>
                 </div>
             </section>
@@ -72,13 +72,6 @@ export default function Home() {
                             );
                         })}
                     </div>
-
-                    {/* <div className="flex flex-row w-60 h-40 gap-4 mt-10 justify-items-center space-x-8">
-                        <img src={Book} alt="book.png" />
-                        <img src={Book} alt="book.png" />
-                        <img src={Book} alt="book.png" />
-                        <img src={Book} alt="book.png" />
-                    </div>  */}
                 </div>
             </section>
 
@@ -87,8 +80,8 @@ export default function Home() {
             <section className="bg-dark-green font-sans py-12 px-4 sm:px-6 lg:px-8">
                 <div className="container mx-auto max-w-4xl">
                     <div className="text-center mb-12">
-                        <h1 className="text-3xl sm:text-4xl font-bold text-cyan-50 mb-4">Frequently Asked Questions</h1>
-                        <p className="text-base sm:text-lg text-gray-300">Find answers to common questions about our products and services.</p>
+                        <h1 className="text-3xl sm:text-4xl font-bold text-light-green mb-4">Frequently Asked Questions</h1>
+                        <p className="text-base sm:text-lg text-light-green">Find answers to common questions about our products and services.</p>
                     </div>
 
                     <div className="space-y-4">
@@ -188,19 +181,44 @@ export default function Home() {
 
 
             <section className="px-4 py-12 bg-cyan-200 grid grid-cols-1 md:grid-cols-3 gap-6 sm:px-6 lg:px-8">
-                <div className="bg-gray-50 rounded-2xl p-6 text-black">
-                    <p className="text-xs sm:text-sm">CLIENTS REVIEW</p>
+               
+
+              
+                <div className="bg-gray-50 rounded-2xl mt-15 p-6 text-black">
+                    <p className="text-xs sm:text-sm"></p>
                     <h1 className="text-2xl sm:text-3xl mt-4">Success Stories <br />From Satisfied <br />Clients</h1>
                 </div>
-                <div className="bg-green-300 rounded-2xl p-6 text-black">
-                    <p className="text-xs sm:text-sm">CLIENT</p>
+
+                <div className="bg-green-300 mt-15 rounded-2xl p-6 text-black">
+                    <p className="text-xs sm:text-sm"></p>
                     <p className="font-light text-xs sm:text-sm mt-2">Name: Daniel Owusu
                         <br />Review:
                         "The new Library Management App has made it incredibly easy for us to manage books. Adding, updating, or removing books is seamless, and the real-time success/error messages help us know what's working instantly. The app is fast, intuitive, and has significantly reduced manual entry errors."
                     </p>
                 </div>
+                <div className="bg-gray-50 mt-15 rounded-2xl p-6 text-black">
+                    <p className="text-xs sm:text-sm"></p>
+                    <p className="font-light text-xs sm:text-sm mt-2">Name: Josephine Addo
+                        <br />Review:
+                        "The backend is rock solid! The API documentation made integration with our internal tools very easy, and input validation prevents data entry mistakes. I also appreciate the effort put into error handling, it makes debugging so much easier."
+                    </p>
+                </div>
                 <div className="bg-gray-50 rounded-2xl p-6 text-black">
-                    <p className="text-xs sm:text-sm">CLIENT</p>
+                    <p className="text-xs sm:text-sm"></p>
+                    <p className="font-light text-xs sm:text-sm mt-2">Name: Josephine Addo
+                        <br />Review:
+                        "The backend is rock solid! The API documentation made integration with our internal tools very easy, and input validation prevents data entry mistakes. I also appreciate the effort put into error handling, it makes debugging so much easier."
+                    </p>
+                </div>
+                <div className="bg-gray-50 rounded-2xl p-6 text-black">
+                    <p className="text-xs sm:text-sm"></p>
+                    <p className="font-light text-xs sm:text-sm mt-2">Name: Josephine Addo
+                        <br />Review:
+                        "The backend is rock solid! The API documentation made integration with our internal tools very easy, and input validation prevents data entry mistakes. I also appreciate the effort put into error handling, it makes debugging so much easier."
+                    </p>
+                </div>
+                <div className="bg-gray-50 rounded-2xl p-6 text-black">
+                    <p className="text-xs sm:text-sm"></p>
                     <p className="font-light text-xs sm:text-sm mt-2">Name: Josephine Addo
                         <br />Review:
                         "The backend is rock solid! The API documentation made integration with our internal tools very easy, and input validation prevents data entry mistakes. I also appreciate the effort put into error handling, it makes debugging so much easier."

@@ -34,11 +34,11 @@ export default function BooksPage() {
                 <div className="min-h-screen ">
                     <div className="flex flex-row justify-center text-4xl font-bold text-off-white text-center">
                             < LibraryBig size={48} color="#FDD36B" />
-                        <h1 className="text-4xl font-bold mb-8 text-off-white text-center">
+                        <h1 className="text-4xl font-bold mb-8 text-black text-center">
                             Library Collection
                         </h1>
                     </div>
-                    <p className='text-sm font-bold mb-8 text-off-white text-center'>
+                    <p className='text-sm font-bold mb-8 text-black text-center'>
                         Manage your library collection with ease. Search, add, edit, and organize <br />
                         your books.
                     </p>
@@ -52,7 +52,7 @@ export default function BooksPage() {
                             <input
                                 type="text"
                                 placeholder="Search by title or author"
-                                className="w-full pl-10 px-4 py-2 border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-off-white bg-light-green"
+                                className="w-full pl-10 px-4 py-2 border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-off-white bg-light-green text-white"
                             />
                         </div>
                     </div>
