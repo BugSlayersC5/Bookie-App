@@ -39,11 +39,11 @@ export default function ViewBook() {
                             <p className="text-lg text-gray-700 italic mb-3">by {book.author}</p>
                             <div>
                                 <p className="text-gray-600 leading-relaxed">{book.bookCategory}</p>
-                        <p className="text-gray-600 leading-relaxed">{book.publicationYear}</p>
-                        <p className="text-gray-600 leading-relaxed">{book.publicationCompany}</p>
+                                <p className="text-gray-600 leading-relaxed">{book.publicationYear}</p>
+                                <p className="text-gray-600 leading-relaxed">{book.publicationCompany}</p>
                             </div>
                         </div>
-                         
+
                         <button
                             onClick={() => window.history.back()}
                             className="self-start mt-4 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition"
