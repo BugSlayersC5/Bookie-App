@@ -6,7 +6,7 @@ export default function SubmitButton({title}) {
     return (
         <button
             type="submit"
-            className="w-full bg-[#192D30] text-white py-2 px-4 rounded-md hover:bg-[#234046] transition"
+            className="w-full bg-[#192D30] text-white py-2 px-4 rounded-md hover:bg-[#234046] transition cursor-pointer"
             disabled={pending}
         >
             {title}

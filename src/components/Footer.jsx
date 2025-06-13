@@ -73,13 +73,13 @@ export default function Footer() {
                     </div>
                     <div className=" not-italic space-x-2">
                         <h3 className="text-lg font-medium mb-4 text-gray-400">Stay Tuned With Us</h3>
-                        <div className="flex items-center space-x-2 text-sm text-white hover:text-[#FDD36B]">
-                            <MapPin className="w-6 h-6  " />
-                            <p className="mb-3">Greater Accra <br /> Afriyie Street </p>
+                        <div className="flex items-center space-x-2 text-sm text-white hover:text-[#FDD36B] mb-3">
+                            <MapPin className="w-6 h-6 " />
+                            <p>Greater Accra, Afriyie Street </p>
                         </div>
-                        <div className="flex items-center space-x-2 text-sm text-white hover:text-[#FDD36B]">
+                        <div className="flex items-center space-x-2 text-sm text-white hover:text-[#FDD36B] mb-3">
                             <Mail className="w-5 h-5 " />
-                        <p className="mb-3">Bookieguys@gmail.com </p>
+                        <p>Bookieguys@gmail.com </p>
                         </div>
                             <div className="flex items-center space-x-2 text-sm text-white hover:text-[#FDD36B] ">
                             <Phone className="w-5 h-5" />
