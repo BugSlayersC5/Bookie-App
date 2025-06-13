@@ -5,7 +5,10 @@ import { BookCard } from "../components/BookCard";
 import { apiClient } from "../api/client";
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
-import { FaChevronDown } from "react-icons/fa";
+import { ChevronDown } from "lucide-react";
+
+
+
 
 const faqs = [
   {
@@ -175,7 +178,7 @@ export default function Home() {
                   <h3 className="text-base sm:text-lg font-semibold text-gray-800">
                     {faq.question}
                   </h3>
-                  <FaChevronDown
+                  <ChevronDown
                     className={`text-light-green transform transition-transform duration-300 ${
                       openIndex === index ? "rotate-180" : ""
                     }`}
