@@ -4,6 +4,7 @@ import Book from "../assets/book.png";
 import { BookCard } from "../components/BookCard";
 import { apiClient } from "../api/client";
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 
 
 export default function Home() {
@@ -43,8 +44,12 @@ export default function Home() {
                     </h4>
 
                     <div className="flex flex-col sm:flex-row gap-4 mt-10 justify-center sm:justify-start">
-                        <button className="text-xs sm:text-sm rounded-md bg-curry py-3 px-6 text-black hover:opacity-90 transition-opacity">ADD BOOK</button>
-                        <button className="text-xs sm:text-sm rounded-md bg-[#029967] py-3 px-6 text-white hover:opacity-90 transition-opacity">VIEW BOOKS</button>
+                        <Link to="/create-book">
+                            <button className="text-xs sm:text-sm rounded-md bg-curry py-3 px-6 text-black hover:opacity-90 transition-opacity cursor-pointer">ADD BOOK</button>
+                        </Link>
+                        <Link to="/books-page">
+                            <button className="text-xs sm:text-sm rounded-md bg-[#029967] py-3 px-6 text-white hover:opacity-90 transition-opacity">VIEW BOOKS</button>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -169,9 +174,9 @@ export default function Home() {
                     </div>
 
                     <div className="mt-16 text-center bg-indigo-50 rounded-xl p-6 sm:p-8">
-                        <h2 className="text-xl sm:text-2xl font-bold text-dark-green mb-3">Still have questions?</h2>
-                        <p className="text-sm sm:text-base text-gray-600 mb-6">Our support team is happy to help you with any other questions you might have.</p>
-                        <button className="px-6 py-3 bg-dark-green text-white rounded-lg hover:bg-indigo-700 transition font-medium text-sm sm:text-base">
+                        <h2 className="text-xl sm:text-2xl font-bold text-light-green mb-3">Still have questions?</h2>
+                        <p className="text-sm sm:text-base text-light-green mb-6">Our support team is happy to help you with any other questions you might have.</p>
+                        <button className="px-6 py-3 bg-light-green text-white rounded-lg hover:bg-indigo-700 transition font-medium text-sm sm:text-base">
                             Contact Support
                         </button>
                     </div>
