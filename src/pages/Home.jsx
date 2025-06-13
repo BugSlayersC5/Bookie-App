@@ -86,7 +86,7 @@ export default function Home() {
       <Navbar />
       <section className="bg-[url('./assets/book.png')] bg-cover sm: w-full h-[70vh] md:h-[100vh] flex items-start justify-st text-center sm:text-left p-4 sm:p-6">
         <div className="py-16 sm:py-20 px- 2sm:px-6 max-w-4xl w-full md:ml-25 lg:mx-auto">
-<p className="relative text-sm text-curry mb-2 before:content-[''] before:absolute before:top-0 before:left-0 before:w-10 before:h-[2px] before:bg-curry before:-translate-y-2">
+<p className="relative  text-curry mb-2 before:content-[''] before:absolute before:top-0 before:left-0 before:w-10 text-2xl italic before:h-[2px] before:bg-curry before:-translate-y-2 animate-bounce">
   Hello New Friend
 </p>
           <h1 className="font-bold text-4xl leading-tight md:text-7xl text-white font-serif mb-2">
@@ -135,10 +135,10 @@ export default function Home() {
 
           <div className="bg-cyan-50 p-8 rounded-lg text-center mb-12">
             <h2 className="font-serif text-xl sm:text-2xl text-gray-700 mb-3">
-              OUR MENU
+              {/* OUR MENU */}
             </h2>
-            <h1 className="font-bold text-3xl sm:text-4xl text-black font-serif mb-6">
-              OUR BOOKS
+            <h1 className="font-bold text-3xl sm:text-4xl text-black font-serif mb-6 italic">
+              AVAILABLE BOOKS
             </h1>
             <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quo
@@ -202,7 +202,7 @@ export default function Home() {
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
     {/* Title Card */}
     <div className="bg-gray-50 rounded-2xl p-6 flex items-center justify-center text-center text-black shadow-md">
-      <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+      <h1 className="text-3xl sm:text-4xl font-bold leading-tight italic">
         Success Stories <br />
         From Satisfied <br />
         Clients
@@ -214,35 +214,35 @@ export default function Home() {
       {
         name: 'Josephine Addo',
         email: 'josephine.addo@example.com',
-        img: 'https://i.pravatar.cc/100?img=12',
+        img: 'https://plus.unsplash.com/premium_photo-1669882305249-5af7f5ed5c10?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjB3b21hbiUyMHBvcnRyYWl0fGVufDB8fDB8fHww',
         message:
           'The backend is rock solid! The API documentation made integration with our internal tools very easy, and input validation prevents data entry mistakes.',
       },
       {
         name: 'Kwame Agyeman',
         email: 'kwame.agyeman@example.com',
-        img: 'https://i.pravatar.cc/100?img=15',
+        img: 'https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         message:
           'Absolutely love how seamless the integration process was. Great attention to detail, especially in handling errors and edge cases!',
       },
       {
         name: 'Ama Serwaa',
         email: 'ama.serwaa@example.com',
-        img: 'https://i.pravatar.cc/100?img=30',
+        img: 'https://images.unsplash.com/photo-1530785602389-07594beb8b73?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         message:
           'This project helped streamline our entire backend process. Kudos to the team for excellent performance and communication.',
       },
       {
         name: 'Daniel Boateng',
         email: 'daniel.boateng@example.com',
-        img: 'https://i.pravatar.cc/100?img=18',
+        img: 'https://images.unsplash.com/photo-1529111290557-82f6d5c6cf85?q=80&w=1386&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         message:
           'The documentation was crystal clear and the system works like a charm. Great experience throughout the project!',
       },
       {
         name: 'Linda Mensah',
         email: 'linda.mensah@example.com',
-        img: 'https://i.pravatar.cc/100?img=22',
+        img: 'https://images.unsplash.com/photo-1531727991582-cfd25ce79613?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         message:
           'From planning to deployment, the team exceeded expectations. Highly reliable and extremely helpful during testing.',
       },
