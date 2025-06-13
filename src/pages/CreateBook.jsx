@@ -2,27 +2,24 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { apiClient } from "../api/client";
 import SubmitButton from "../components/SubmitButton";
-
+import { useNavigate } from "react-router";
 
 export default function CreateBook() {
-  const postBook = (event) => {
-    event.preventDefault();
+  const navigate = useNavigate();
 
-    // Collect form input
-    const data = new FormData(event.target);
-
+  const postBook = async (data) => {
     // Post data to api
-    apiClient.post("/books", data, {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error)
-      })
+    try {
+      const response = await apiClient.post("/books", data, {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+      console.log(response);
+      navigate('/books-page');
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
@@ -32,7 +29,7 @@ export default function CreateBook() {
       <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-8">
         <div className="w-full max-w-lg bg-white p-6 rounded-xl shadow-md">
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">Add New Book</h2>
-          <form onSubmit={postBook} className="space-y-4">
+          <form action={postBook} className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700">Title</label>
               <input
@@ -90,7 +87,9 @@ export default function CreateBook() {
             </div>
 
             <div>
-              <SubmitButton title={"Add Book"} />
+              <SubmitButton
+                title={"Add Book"}
+                className="w-full bg-[#192D30] text-white py-2 px-4 rounded-md hover:bg-[#234046] transition cursor-pointer" />
             </div>
           </form>
         </div>
