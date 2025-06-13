@@ -86,7 +86,7 @@ export default function Home() {
       <Navbar />
       <section className="bg-[url('./assets/book.png')] bg-cover sm: w-full h-[70vh] md:h-[100vh] flex items-start justify-st text-center sm:text-left p-4 sm:p-6">
         <div className="py-16 sm:py-20 px- 2sm:px-6 max-w-4xl w-full md:ml-25 lg:mx-auto">
-<p className="relative  text-curry mb-2 before:content-[''] before:absolute before:top-0 before:left-0 before:w-10 text-2xl italic before:h-[2px] before:bg-curry before:-translate-y-2 animate-bounce">
+<p className="relative  text-curry mb-2 text-2xl italic before:h-[2px] before:bg-curry before:-translate-y-2 animate-bounce">
   Hello New Friend
 </p>
           <h1 className="font-bold text-4xl leading-tight md:text-7xl text-white font-serif mb-2">
