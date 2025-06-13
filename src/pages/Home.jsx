@@ -10,22 +10,22 @@ import { Link } from "react-router";
 export default function Home() {
 
     const [books, setBooks] = useState([]);
-    
-        const getBooks = () => {
-            apiClient.get('/books')
-                .then((response) => {
-                    console.log(response.data);
-                    setBooks(response.data.data);
-    
-                })
-                .catch((error) => {
-                    console.log(error)
-                })
-    
-        }
-    
-        useEffect(getBooks, []);
-    
+
+    const getBooks = () => {
+        apiClient.get('/books')
+            .then((response) => {
+                console.log(response.data);
+                setBooks(response.data.data);
+
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+
+    }
+
+    useEffect(getBooks, []);
+
 
     return (
         <>
@@ -185,50 +185,137 @@ export default function Home() {
 
 
 
-            <section className="px-4 py-12 bg-cyan-200 grid grid-cols-1 md:grid-cols-3 gap-6 sm:px-6 lg:px-8">
-               
+            <section className="px-10 py-12 bg-cyan-200 grid grid-cols-1 md:grid-cols-3 gap-6  md:px-8">
 
-              
-                <div className="bg-gray-50 rounded-2xl mt-15 p-6 text-black">
+                <div className="bg-gray-50 flex py-25 rounded-2xl p-4 h-90 text-black">
                     <p className="text-xs sm:text-sm"></p>
-                    <h1 className="text-2xl sm:text-3xl mt-4">Success Stories <br />From Satisfied <br />Clients</h1>
+                    <h1 className="text-5xl flex justify-around  mt-4">Success Stories <br />From Satisfied <br />Clients</h1>
                 </div>
 
-                <div className="bg-green-300 mt-15 rounded-2xl p-6 text-black">
-                    <p className="text-xs sm:text-sm"></p>
-                    <p className="font-light text-xs sm:text-sm mt-2">Name: Daniel Owusu
-                        <br />Review:
-                        "The new Library Management App has made it incredibly easy for us to manage books. Adding, updating, or removing books is seamless, and the real-time success/error messages help us know what's working instantly. The app is fast, intuitive, and has significantly reduced manual entry errors."
+
+
+                <div className="bg-gray-50 rounded-2xl p-6 text-black flex flex-col justify-between hover:bg-green-300 transition-colors duration-300">
+
+                    <p className="text-4xl text-dark-green mb-2" style={{ fontFamily: '"Passion One", sans-serif' }}>
+                        &ldquo;
                     </p>
-                </div>
-                <div className="bg-gray-50 mt-15 rounded-2xl p-6 text-black">
-                    <p className="text-xs sm:text-sm"></p>
-                    <p className="font-light text-xs sm:text-sm mt-2">Name: Josephine Addo
-                        <br />Review:
-                        "The backend is rock solid! The API documentation made integration with our internal tools very easy, and input validation prevents data entry mistakes. I also appreciate the effort put into error handling, it makes debugging so much easier."
+                    <p className="text-sm sm:text-base text-gray-700 font-light mb-6">
+                        "The backend is rock solid! The API documentation made integration with our internal tools very easy, and input validation prevents data entry mistakes. I also appreciate the effort put into error handling — it makes debugging so much easier."
                     </p>
+
+
+                    <div className="flex items-center gap-4 mt-auto pt-4 border-t border-gray-200">
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=12"
+                            alt="Josephine Addo"
+                            className="w-12 h-12 rounded-full object-cover border-2 border-dark-green"
+                        />
+
+                        <div className="flex flex-col text-sm text-gray-800">
+                            <span className="font-semibold">Josephine Addo</span>
+                            <span className="text-xs text-gray-600">josephine.addo@example.com</span>
+                        </div>
+                    </div>
                 </div>
-                <div className="bg-gray-50 rounded-2xl p-6 text-black">
-                    <p className="text-xs sm:text-sm"></p>
-                    <p className="font-light text-xs sm:text-sm mt-2">Name: Josephine Addo
-                        <br />Review:
-                        "The backend is rock solid! The API documentation made integration with our internal tools very easy, and input validation prevents data entry mistakes. I also appreciate the effort put into error handling, it makes debugging so much easier."
+                <div className="bg-gray-50 rounded-2xl p-6 text-black flex flex-col justify-between hover:bg-green-300 transition-colors duration-300">
+
+                    <p className="text-4xl text-dark-green mb-2" style={{ fontFamily: '"Passion One", sans-serif' }}>
+                        &ldquo;
                     </p>
-                </div>
-                <div className="bg-gray-50 rounded-2xl p-6 text-black">
-                    <p className="text-xs sm:text-sm"></p>
-                    <p className="font-light text-xs sm:text-sm mt-2">Name: Josephine Addo
-                        <br />Review:
-                        "The backend is rock solid! The API documentation made integration with our internal tools very easy, and input validation prevents data entry mistakes. I also appreciate the effort put into error handling, it makes debugging so much easier."
+                    <p className="text-sm sm:text-base text-gray-700 font-light mb-6">
+                        "The backend is rock solid! The API documentation made integration with our internal tools very easy, and input validation prevents data entry mistakes. I also appreciate the effort put into error handling — it makes debugging so much easier."
                     </p>
+
+
+                    <div className="flex items-center gap-4 mt-auto pt-4 border-t border-gray-200">
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=12"
+                            alt="Josephine Addo"
+                            className="w-12 h-12 rounded-full object-cover border-2 border-dark-green"
+                        />
+
+                        <div className="flex flex-col text-sm text-gray-800">
+                            <span className="font-semibold">Josephine Addo</span>
+                            <span className="text-xs text-gray-600">josephine.addo@example.com</span>
+                        </div>
+                    </div>
                 </div>
-                <div className="bg-gray-50 rounded-2xl p-6 text-black">
-                    <p className="text-xs sm:text-sm"></p>
-                    <p className="font-light text-xs sm:text-sm mt-2">Name: Josephine Addo
-                        <br />Review:
-                        "The backend is rock solid! The API documentation made integration with our internal tools very easy, and input validation prevents data entry mistakes. I also appreciate the effort put into error handling, it makes debugging so much easier."
+
+                <div className="bg-gray-50 rounded-2xl p-6 text-black flex flex-col justify-between hover:bg-green-300 transition-colors duration-300">
+
+                    <p className="text-4xl text-dark-green mb-2" style={{ fontFamily: '"Passion One", sans-serif' }}>
+                        &ldquo;
                     </p>
+                    <p className="text-sm sm:text-base text-gray-700 font-light mb-6">
+                        "The backend is rock solid! The API documentation made integration with our internal tools very easy, and input validation prevents data entry mistakes. I also appreciate the effort put into error handling — it makes debugging so much easier."
+                    </p>
+
+
+                    <div className="flex items-center gap-4 mt-auto pt-4 border-t border-gray-200">
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=12"
+                            alt="Josephine Addo"
+                            className="w-12 h-12 rounded-full object-cover border-2 border-dark-green"
+                        />
+
+                        <div className="flex flex-col text-sm text-gray-800">
+                            <span className="font-semibold">Josephine Addo</span>
+                            <span className="text-xs text-gray-600">josephine.addo@example.com</span>
+                        </div>
+                    </div>
                 </div>
+                <div className="bg-gray-50 rounded-2xl p-6 text-black flex flex-col justify-between hover:bg-green-300 transition-colors duration-300">
+
+                    <p className="text-4xl text-dark-green mb-2" style={{ fontFamily: '"Passion One", sans-serif' }}>
+                        &ldquo;
+                    </p>
+                    <p className="text-sm sm:text-base text-gray-700 font-light mb-6">
+                        "The backend is rock solid! The API documentation made integration with our internal tools very easy, and input validation prevents data entry mistakes. I also appreciate the effort put into error handling — it makes debugging so much easier."
+                    </p>
+
+
+                    <div className="flex items-center gap-4 mt-auto pt-4 border-t border-gray-200">
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=12"
+                            alt="Josephine Addo"
+                            className="w-12 h-12 rounded-full object-cover border-2 border-dark-green"
+                        />
+
+                        <div className="flex flex-col text-sm text-gray-800">
+                            <span className="font-semibold">Josephine Addo</span>
+                            <span className="text-xs text-gray-600">josephine.addo@example.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="bg-gray-50 rounded-2xl p-6 text-black flex flex-col justify-between hover:bg-green-300 transition-colors duration-300">
+
+                    <p className="text-4xl text-dark-green mb-2" style={{ fontFamily: '"Passion One", sans-serif' }}>
+                        &ldquo;
+                    </p>
+                    <p className="text-sm sm:text-base text-gray-700 font-light mb-6">
+                        "The backend is rock solid! The API documentation made integration with our internal tools very easy, and input validation prevents data entry mistakes. I also appreciate the effort put into error handling — it makes debugging so much easier."
+                    </p>
+
+
+                    <div className="flex items-center gap-4 mt-auto pt-4 border-t border-gray-200">
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=12"
+                            alt="Josephine Addo"
+                            className="w-12 h-12 rounded-full object-cover border-2 border-dark-green"
+                        />
+
+                        <div className="flex flex-col text-sm text-gray-800">
+                            <span className="font-semibold">Josephine Addo</span>
+                            <span className="text-xs text-gray-600">josephine.addo@example.com</span>
+                        </div>
+                    </div>
+                </div>
+
             </section>
             <Footer />
         </>

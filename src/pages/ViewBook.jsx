@@ -26,33 +26,37 @@ export default function ViewBook() {
     return (
         <>
             <Navbar />
-            <div className="min-h-screen bg-gradient-to-b from-green-100 via-white to-green-50 py-10 px-4">
-                <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 flex flex-col md:flex-row gap-6 animate-fade-in">
-                    <img
-                        src={book.image}
-                        alt={book.title}
-                        className="w-full md:w-1/3 h-72 object-cover rounded-lg shadow-md transform hover:scale-105 transition duration-300"
-                    />
-                    <div className="flex-1 flex flex-col justify-between space-y-4">
-                        <div>
-                            <h1 className="text-4xl font-extrabold text-green-900 mb-2">{book.title}</h1>
-                            <p className="text-lg text-gray-700 italic mb-3">by {book.author}</p>
-                            <div>
-                                <p className="text-gray-600 leading-relaxed">{book.bookCategory}</p>
-                                <p className="text-gray-600 leading-relaxed">{book.publicationYear}</p>
-                                <p className="text-gray-600 leading-relaxed">{book.publicationCompany}</p>
-                            </div>
-                        </div>
+         <div className="min-h-screen bg-gray-50 py-10 px-4">
+  <div className="max-w-5xl mx-auto bg-white border border-gray-200 rounded-3xl shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-2">
+    <div className="w-full h-80 md:h-auto">
+      <img
+        src={book.image}
+        alt={book.title}
+        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+      />
+    </div>
+    <div className="p-6 flex flex-col justify-between space-y-6">
+      <div>
+        <h1 className="text-3xl font-semibold text-gray-900">{book.title}</h1>
+        <p className="text-gray-500 italic mt-1">by {book.author}</p>
 
-                        <button
-                            onClick={() => window.history.back()}
-                            className="self-start mt-4 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition"
-                        >
-                            ← Back
-                        </button>
-                    </div>
-                </div>
-            </div>
+        <div className="mt-4 space-y-1 text-sm text-gray-600">
+          <p><span className="text-gray-800 font-medium">Category:</span> {book.bookCategory}</p>
+          <p><span className="text-gray-800 font-medium">Year:</span> {book.publicationYear}</p>
+          <p><span className="text-gray-800 font-medium">Publisher:</span> {book.publicationCompany}</p>
+        </div>
+      </div>
+
+      <button
+        onClick={() => window.history.back()}
+        className="mt-4 w-fit px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded-md hover:bg-gray-700 transition"
+      >
+        ← Back
+      </button>
+    </div>
+  </div>
+</div>
+
             <Footer />
         </>
     );
