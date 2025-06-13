@@ -65,7 +65,7 @@ export function BookCard({ book }) {
                     </Link>
                     <button
                         onClick={deleteBook}
-                        className="p-1.5 rounded-full hover:bg-red-100 text-red-500 transition-colors duration-200"
+                        className="p-1.5 rounded-full hover:bg-red-100 text-red-500 transition-colors duration-200 cursor-pointer"
                         title="Delete Book"
                     >
                         <Trash2 size={18} />
