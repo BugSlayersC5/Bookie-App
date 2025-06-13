@@ -14,25 +14,25 @@ const Loader = () => {
         {/* Pages use off-white background with dark-green borders and light-green text. */}
         <div className="absolute inset-0 bg-off-white border-l border-r border-dark-green rounded-lg shadow-inner flex items-center justify-center transform-origin-left animate-page-flip"
              style={{ animationDelay: '2.4s', zIndex: 10 }}> {/* Initial z-index for layering */}
-          <span className="text-light-green text-lg md:text-xl font-semibold">E</span>
+          <span className="text-light-green text-lg md:text-xl font-semibold">B</span>
         </div>
 
         {/* Page 3 - "I" */}
         <div className="absolute inset-0 bg-off-white border-l border-r border-dark-green rounded-lg shadow-inner flex items-center justify-center transform-origin-left animate-page-flip"
              style={{ animationDelay: '1.8s', zIndex: 11 }}>
-          <span className="text-light-green text-lg md:text-xl font-semibold">I</span>
+          <span className="text-light-green text-lg md:text-xl font-semibold">O</span>
         </div>
 
         {/* Page 2 - "K" */}
         <div className="absolute inset-0 bg-off-white border-l border-r border-dark-green rounded-lg shadow-inner flex items-center justify-center transform-origin-left animate-page-flip"
              style={{ animationDelay: '1.2s', zIndex: 12 }}>
-          <span className="text-light-green text-lg md:text-xl font-semibold">K</span>
+          <span className="text-light-green text-lg md:text-xl font-semibold">O</span>
         </div>
 
         {/* Page 1 - "O" */}
         <div className="absolute inset-0 bg-off-white border-l border-r border-dark-green rounded-lg shadow-inner flex items-center justify-center transform-origin-left animate-page-flip"
              style={{ animationDelay: '0.6s', zIndex: 13 }}>
-          <span className="text-light-green text-lg md:text-xl font-semibold">O</span>
+          <span className="text-light-green text-lg md:text-xl font-semibold">K</span>
         </div>
 
         {/* Right Book Cover - "O" (top-most flipping page layer initially) */}
